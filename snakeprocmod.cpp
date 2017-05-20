@@ -11,11 +11,19 @@ int main()
 		cin>>l;
 		int flag = 0;
 		int counth = 0; int countt = 0;
-		char str2[500];
-		char str[500];
+		char str2[l];
+		char str[l];
 		cin>>str;
-		
-		for(int i=0;i<strlen(str);i++)
+
+		for(int i=0;i<l;i++)
+		{
+			if(str[i]!='.')
+			{
+				str2[k]=str[i];
+				k++;
+			}
+		}
+		/*for(int i=0;i<l;i++)
 			{
 				if(str[i]!='.')
 				{
@@ -26,16 +34,23 @@ int main()
 					}
 					else if(str2[k]=='T')
 					{
-						countt++;	
+						countt++;
 					}
 					k++;
 				}
-			}
-		if(str2[0]=='T')
+			}*/
+			for(int i=0;i<k;i++)
+				{	
+					if(str2[i]==str2[i+1])
+					{
+						flag = 1;
+					}
+				}	
+			if(str2[0]=='T')
 			{
 				flag = 1;
 			}
-			else if(counth==countt)
+			/*else if(counth==countt)
 			{
 				for(int i=0;i<k;i++)
 				{	
@@ -44,7 +59,7 @@ int main()
 						flag = 1;
 					}
 				}
-			}
+			}*/
 			else
 			{
 				flag = 1;
@@ -59,4 +74,5 @@ int main()
 			cout<<"Invalid"<<endl;
 		}
 	}
+	return 0;
 }
