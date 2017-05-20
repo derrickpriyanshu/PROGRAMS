@@ -14,42 +14,24 @@ int main()
 		char str2[500];
 		char str[500];
 		cin>>str;
-		/*while(l>0)
-		{
-			char ch;
-			cin>>ch;
-			if(ch!='.')
-			{
-				str[k]=ch;
-				if(str[k]=='H')
-				{
-					counth++;
-				}
-				else if(str[k]=='T')
-				{
-					countt++;
-				}
-				k++;
-			}
-			l--;
-		}*/
+		
 		for(int i=0;i<strlen(str);i++)
 			{
 				if(str[i]!='.')
 				{
 					str2[k] = str[i];
+					if(str2[k]=='H')
+					{
+						counth++;
+					}
+					else if(str2[k]=='T')
+					{
+						countt++;	
+					}
 					k++;
 				}
 			}
-		for(int i=0;i<k;i++)
-		{
-			if(str2[i]=='H')
-				{counth++;}
-			else if(str2[i]=='T')
-				{countt++;}
-		}
-			
-			if(str2[0]=='T')
+		if(str2[0]=='T')
 			{
 				flag = 1;
 			}
